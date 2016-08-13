@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">点名</button>
+	<script>
+        var color=["红","橙","黄","绿","青","蓝","紫"];
+        var arr=[];
+        function selectColor(){
+        	var num = Math.floor(Math.random()*color.length);
+        	var strcolor=color[num];
+        	if(arr.length===0){
+        		arr.push(strcolor);
+        		console.log(strcolor);
+        	}else if(arr.length<color.length){
+        		for(var i=0;i<color.length;i++){
+        			if(strcolor===arr[i]){
+                       selectColor();
+                       return;
+        			}
+        		}
+        		arr.push(strcolor);
+        		console.log(strcolor);
+        	}
+        }
+        document.querySelector("#btn").onclick=selectColor;
+
+	</script>
+</body>
+</html>

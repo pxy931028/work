@@ -1,0 +1,15 @@
+extends header
+block content
+	link(rel="stylesheet", href="style/table.css")
+	table
+		thead
+			tr
+				td name
+				td age
+				td sex
+		tbody
+			-for(var j=0;j<arr.length;j++)
+				tr
+					td=arr[j].name
+					td=arr[j].age
+					td=arr[j].sex

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="add">+</button>
+	<button id="sub">-</button>
+	<script>
+	var count=(function(){
+		var n=0;
+		var  price =3.14;
+       function addfun(){
+          n++;    
+        var  toal=(n*price).toFixed(2);
+          console.log(toal);
+       }
+       function subfun(){
+          n--;   
+        var  toal=(n*price).toFixed(2);
+          console.log(toal);
+       }
+       return {
+       	addfun:addfun,
+       	subfun:subfun
+       }
+	})()
+	   
+       console.log(count)
+       document.querySelector("#add").onclick=count.addfun
+       document.querySelector("#sub").onclick=count.subfun
+
+	</script>
+</body>
+</html>

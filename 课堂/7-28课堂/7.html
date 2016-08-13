@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn1">按年龄排序</button>
+	<button id="btn2">按颜色排序</button>
+	<p>
+		<span class="na"></span>
+		<span class="co"></span>
+		<span class="ag"></span>
+    </p>
+	<script>
+		var arr=[{"name":"红","colol":5,"age":4},
+				 {"name":"橙","colol":3,"age":5},
+				 {"name":"黄","colol":2,"age":3},
+				 {"name":"绿","colol":9,"age":8},
+				 {"name":"青","colol":7,"age":2},
+				 {"name":"蓝","colol":4,"age":7},
+				 {"name":"紫","colol":8,"age":9}]	
+		var len=arr.length;
+		var oname=document.querySelector(".na")
+		var ocolol=document.querySelector(".co")
+		var oage=document.querySelector(".ag")
+
+	    for(var i=0;i<len;i++){
+	    	
+			oname.text(arr[i].name)	
+
+			}
+		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>s
+<body>
+	<div id="mybox"></div>
+	<script>
+       var obox = document.querySelector("#mybox")
+       function addClass(elem,str){
+       	if(elem.className){
+        	var	newClass=elem.className+" "+str
+        	obox.className=newClass        
+       	}else{
+       	var	newClass=str
+       	obox.className=newClass       		
+       	}
+       }
+      var n= addClass(obox,"xih")
+      
+	</script>
+</body>
+</html>

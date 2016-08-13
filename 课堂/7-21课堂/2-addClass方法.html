@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <style>
+  </style>
+</head>
+<body>
+	<div class="box"></div>
+	<script>
+        var obox = document.querySelector(".box")
+        var bname = obox.className
+        function fun(elem,str){  
+           if(bname ==""){
+                    bname = str
+           }else{
+           	bname= bname +" "+ str
+            return bname
+           }
+        }
+        obox.className=fun(obox,"xixi")
+         
+        console.log(obox.className)  
+        // $(".box").addClass("active")
+	</script>
+	
+</body>
+</html>

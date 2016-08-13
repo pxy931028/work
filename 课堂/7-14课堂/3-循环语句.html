@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="js">
+	<span></span>
+	<script src="script/jquery.js"></script>
+	<script>
+	  var sum = 0
+     for( var i=0; i<101;i++){
+       sum += i    
+    }
+       $("#js").val(sum)
+       console.log(sum)
+       $("span").text(sum)
+	</script>
+	
+</body>
+</html>

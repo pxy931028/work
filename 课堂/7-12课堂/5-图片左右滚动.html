@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+          *{
+          	margin:0px;
+          	padding:0px;
+          }
+          .clear{
+            clear:left;
+          }
+          .box{
+          	width: 500px;
+          	border:1px solid red;
+          	overflow:hidden;
+          }
+          .bigbox{
+          	width: 2550px;
+          }
+          .smallbox img{
+          	width: 500px;
+            float:left;
+          }
+          ul{
+           margin-left:200px;
+           margin-top:20px;
+
+          }
+          ul li{
+          	list-style:none;
+          	float:left;
+          	width: 28px;
+          	height: 30px;
+          	border:1px solid red;
+          	line-height:30px;
+          	text-align:center;
+            cursor:pointer;
+          }
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="bigbox">
+			<div class="smallbox">
+				<img src="images/0.jpg" alt="">
+	      <img src="images/1.jpg" alt="">
+	      <img src="images/2.jpg" alt="">
+	      <img src="images/3.jpg" alt="">
+	      <img src="images/4.jpg" alt="">
+			</div>
+		</div>
+	</div>
+  <div class="clear"></div>
+	<ul class="an">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+        $(".an li").click(function(){
+          var i=$ (this).index();
+          var change=(-500*i)+"px"    //var change=i*-500   默认单位为：px
+          $(".smallbox").animate({"margin-left":change},500)
+        })
+  </script>
+</body>
+</html>

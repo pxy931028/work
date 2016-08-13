@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	     *{
+            margin:0px;
+            padding:0px;
+        }
+        .select{
+            display:block;
+        }
+        .gerbox{
+         /*   overflow:hidden;*/
+        }
+        /* #menu>li{
+         	list-style:none;
+         	float:left;
+         	width: 60px;
+         	height: 30px;
+         	border:1px solid red;
+            text-align:center;
+            line-height:30px;
+         }
+        .cen{
+        	list-style:none;
+        	/*display:none;*/
+        } */
+	</style>
+</head>
+<body>
+	<div class="geo">
+     <span class="select">北京</span>
+     <div class="geo-box" >
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="tj">天津</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+         <a href="javascript:;" data-text="sh">上海</a>
+
+     </div>   
+    </div>
+     <script src="script/jquery.js"></script>
+     <script>
+      var oli=document.querySelectorAll(".geo-box a")
+     for(var i=0;i<oli.length;i++){
+       
+        // var ospan=document.querySelector("span")
+        oli[i].onclick=function(){
+            var atext=$(this).text()
+            console.log(oli[i])
+            $("span").text(atext)
+
+        }
+     }
+           // $("#menu>li").mouseenter(function(){
+           // 	$(this).find("ul").stop().slideDown(500);
+           // }).mouseleave(function(){
+           // 	$(this).find("ul").stop().slideUp(500);
+           // })
+        // var myBtn = document.getElementById("list-3")
+        // var myDiv = document.getElementById("gps_change")
+        // myBtn.onclick = function(){
+        //     myDiv.style.display = "block";
+        // }
+        // document.body.onclick = function(e){
+        //     e = e || window.event;
+        //     var target = e.target || e.srcElement;
+        //     if (target != myBtn) {
+        //         myDiv.style.display = "none";
+        //     }; 
+        // }
+
+     </script>
+</body>
+</html>

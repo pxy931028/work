@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Fox(name){
+			this.name=name;
+			console.log(this.name)
+			
+		}
+		Fox.prototype.color=function(){
+			console.log("我是透明的");
+		}
+		Fox.prototype.sayname=function(){
+			console.log("我是"+this.name);
+		}
+
+
+		redFox.prototype = new Fox("xiaobai");   //继承原型,访问自身属性
+
+		// var cat=new Fox();                     //cat 是另一个对象与redbox没有关系
+
+		function redFox(){}
+		redFox.prototype.color = "red"
+		redFox.prototype.showcolor=function(){
+			console.log("我是"+this.color+"颜色")
+		}
+		var redfox=new redFox()
+		redfox.showcolor();
+		redfox.sayname();
+		console.log(redfox.color)
+	</script>
+</body>
+</html>

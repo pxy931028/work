@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+	<button class="colol">按值排序</button>
+	<button class="age">按年龄排序</button>
+	<table class="table table-bordered table-hover">
+		<tbody></tbody>
+	</table>	
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script src="data.js"></script>
+	<script>
+		 showdata(studentslist.data)	
+		$(".colol").click(function(){
+			studentslist.colol();
+			showdata(studentslist.data);
+		})
+		$(".age").click(function(){
+			studentslist.age();
+			showdata(studentslist.data);
+		})
+
+		// var arr=[{"name":"红","colol":5,"age":4},
+		// 		 {"name":"橙","colol":3,"age":5},
+		// 		 {"name":"黄","colol":2,"age":3},
+		// 		 {"name":"绿","colol":9,"age":8},
+		// 		 {"name":"青","colol":7,"age":2},
+		// 		 {"name":"蓝","colol":4,"age":7},
+		// 		 {"name":"紫","colol":8,"age":9}]
+				
+		function showdata(arr){
+			$("table tbody").empty();
+				for(var i in arr){				
+					var $tr=$("<tr></tr>")
+					for(var j in arr[i]){
+						var $td=$("<td></td>")
+						var text=arr[i][j]
+						$td.text(text)
+						$tr.append($td)
+					}
+					$("table tbody").append($tr)
+				}
+		}		 
+
+		  
+		// function sort(array,member){
+		// 	var len=array.length;		
+		// 	for(var i=len;i>1;i--){
+		// 		for(var j=0;j<i-1;j++){					
+		// 			if(array[j][member]>array[j+1][member]){
+		// 				var temp=array[j]
+		// 				array[j]=array[j+1]
+		// 				array[j+1]=temp
+		// 			}
+		// 		}
+
+		// 	}
+		// }	
+		// function funage(){
+		// 	sort(arr,"age")
+		// }
+		// function funcolol(){
+		// 	sort(arr,"colol")
+		// }
+
+	</script>
+</body>
+</html>

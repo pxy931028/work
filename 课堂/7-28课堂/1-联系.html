@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr=[9,3,4,2,8,6,5]
+		
+		function fun(array){
+			var len=array.length;
+			for(var i=len;i>1;i-- ){
+				for(var j=0;j<i-1;j++){
+					if(array[j]>array[j+1]){
+						var temp=array[j];
+						array[j]=array[j+1];
+						array[j+1]=temp;
+					}
+				}
+			}
+		}
+		fun(arr)
+		console.log(arr)
+
+		var arr1=[3,7,2,8,4,9]
+		function fun1(array){
+			var len=array.length;
+			for(var i=0;i<len-1;i++ ){
+				for(var j=0;j+i<len-1;j++){
+					if(array[j]>array[j+1]){
+						var temp=array[j];
+						array[j]=array[j+1];
+						array[j+1]=temp;
+					}
+				}
+			}
+		}
+		fun1(arr1)
+		console.log(arr1)
+
+		var arr2=[90,32,56,87,36,75,28]
+		function fun2(array,num){
+			for(var i=0;i<array.length;i++){
+				if(num==array[i]){
+					return i;
+				}
+			}
+			return -1;
+		}
+		var re=fun2(arr2,87)
+		console.log(re)
+
+		var arr3=[65,34,98,76,54,32,19]
+		function fun3(array){
+			min=array[0];
+			for(var i=1;i<array.length;i++){
+				if(min>array[i]){
+					min=array[i];
+				}
+
+			}
+			return min;
+		}
+		var re3=fun3(arr3);
+		console.log(re3);
+
+		var arr4=[1,2,3,4,5,6,7,12,14,16,18,20];
+		function fun4(array,num){
+			var len=array.length;
+			var low=0;
+			var up=len-1;
+			
+			while(low<=up){
+				var mid=Math.floor((low+up)/2)
+				if(array[mid]>num){
+					up=mid-1;
+				}else if(array[mid]<num){
+					low=mid+1;
+				}else{
+					return mid;
+				}
+	
+		var re4=fun4(arr4,18)
+		console.log(re4)		}
+			return -1;
+		}
+
+		var arr5=[1,2,4,7,9,10,23,45]
+		function fun5(array,num){
+			var len=array.length;
+			var low=0;
+			var up=len-1;
+			var index=-1
+			function fun6(){
+				var mid=Math.floor((low+up)/2);
+				if(low<=up){				
+					if(array[mid]>num){
+						up=mid-1;
+						fun6()
+					}else if(array[mid]<num){
+						low=mid+1;
+						fun6()
+					}else{
+						index=mid;
+					}
+				}
+			}
+			fun6()
+			return index;
+		}
+		console.log(fun5(arr5,10))
+	</script>
+</body>
+
+</html>

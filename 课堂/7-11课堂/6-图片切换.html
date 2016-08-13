@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    ul li{
+	    	float:left;
+	    	list-style:none;
+	    	border:1px solid red;
+	    	width: 20px;
+	    	height: 20px;
+	    	cursor:pointer;
+	    	line-height:20px;
+	    	text-align:center;
+	    }
+	    .num .active{
+	    	background-color:red;
+	    }
+	</style>
+</head>
+<body>
+	<img id="pic" src="images/0.jpg" alt="">
+	<ul class="num">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+    <script>
+         
+         $(".num li").click(function(){
+         	var i=$ (this).index();
+            var src= "images/" + i + ".jpg";
+            $("#pic").attr("src",src);
+            $(this).css("background-color","red").siblings().css("background-color","#fff");
+            // $(this).addClass("active").siblings().removeClass("active");
+         });
+    </script>
+</body>
+</html>

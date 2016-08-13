@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+     var oli = document.getElementsByTagName("li");
+     for(var i = 0;i<oli.length;i++){
+			oli[i].onclick = function(){
+				alert("hello world");
+			}
+		}
+	</script>
+</body>
+</html>

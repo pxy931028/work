@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    *{
+	    	margin:0px;
+	    	padding:0px;
+	    }
+	    .clear{
+	    	clear:both;
+	    }
+         #pic {
+         	width: 650px;
+         	overflow:hidden;
+         }
+         #pic ul{
+         	width: 3250px;
+         }
+         #pic ul li{
+         	float:left;
+         	list-style:none;
+         }
+         #list li{
+         	list-style:none;
+         	float:left;
+         	border:1px solid red;
+         	width: 20px;
+         	height: 20px;
+         	line-height:20px;
+         	text-align:center;
+         	cursor:pointer;
+         }
+	</style>
+</head>
+<body>
+	<div id="pic">
+		<ul>
+			<li><img src="images/0.jpg" alt=""></li>
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/3.jpg" alt=""></li>
+			<li><img src="images/4.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<ul id="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+	    var n=0
+	    function fun(){
+	      var change=(-650*n)+"px"    
+          $("#pic ul").animate({"margin-left":change},1000)
+	    	n++ 	
+          if(n==4){
+          	n=0
+          }
+	    }
+	     setInterval(fun,1000)
+
+     //   function fun1(){
+     //   	var t = true
+	    // if (t){
+	    // 	n++;
+	    // 	if(n==4){
+	    // 		t=false
+	    // 	}
+	    // }else{
+	    // 	n--
+	    // 	if(n==0){
+	    // 		t=true
+	    // 	}
+	    // }
+	    // $("#pic ul").animate({"margin-left":-650*n},1000)
+     //   }
+	    // setInterval(fun1,1000) 
+	      // $("#list li").click(function(){
+       //    var i=$ (this).index();
+       //    var change=(-650*i)+"px"    
+       //    $("#pic ul").animate({"margin-left":change},500)
+       //  })
+	</script>
+</body>
+</html>

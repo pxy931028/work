@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="jian" value="-">
+	<input type="text" id="result" value="0">
+	<input type="button" id="add" value="+">
+	<script src="script/jquery.js"></script>
+	<script>
+        $("#add").click(function(){
+        	var result =Number($("#result").val())+1;
+        	$("#result").val(result)
+        });
+        $("#jian").click(function(){
+        	var result =Number($("#result").val())-1;
+        	if (result >= 0 ){
+        		$("#result").val(result)
+        	}
+        });
+	</script>
+</body>
+</html>

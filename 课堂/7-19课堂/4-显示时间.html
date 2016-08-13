@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示时间</title>
+</head>
+<body>
+	 <p>现在是北京时间<span></span></p>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script>
+      function fun(){
+         var today = new Date();
+         var hours = today.getHours();
+         var minutes = today.getMinutes();
+         var seconds = today.getSeconds();
+         var result = hours + ":" + minutes +":" +seconds
+         $("span").text(result)
+      }
+       setInterval(fun,1000);
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式</title>
+	<style>
+     
+	</style>
+</head>
+<body>
+	<script>
+	    // var re = new RegExp();   
+	    // var re = /内容/        //声明正则表达式
+     //    var re =/1/;
+	    // var str ="1"
+	    // var result= re.test(str);     //test方法用于判断表达式与字符串是否匹配
+	    // console.log(result);
+        // var re =/[0-9]+/;
+        //  + 匹配一位或多位
+        //  {} 匹配指定位数
+        //  ^ 以开头 $  以结尾
+
+
+
+        // var a = /^[0-9]+$/
+        // // var a =/^[0-9]{0,}
+        // var a= /^[0-9]?$/
+        // //var a =/^[0-9]{0,1}
+        // var a=/^[0-9]*$/
+        // // var a =/^[0-9]{0,}
+        // var str1 ="16481898"
+        // var result= a.exec(str1)         
+        // console.log(result);  
+
+        var str2 = "2a4786k7367"
+        var re = /[a-z]/g
+        var newStr2 = str2.replace(re,"-")
+        console.log(newStr2);
+        
+        // var newStr2 = str2.split(re)
+        // console.log(newStr2);
+
+         // var re =/^[0-9]{4,14}$/;   
+	    // var str ="1230893776"
+	    // var result= re.exec(str)         //可以看到匹配的内容
+     //     console.log(result);    
+	</script>
+</body>
+</html>

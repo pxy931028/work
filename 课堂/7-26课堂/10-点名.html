@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">点名</button>
+	<script>
+     var colorArr = ["红","橙","黄","绿","青","蓝","紫"];
+     var obj = {};
+     function selectColor(){
+     	var num = Math.floor(Math.random() * colorArr.length);
+		var person = colorArr[num];
+		
+          if(obj[person] === undefined){
+				obj[person] = 1;
+				console.log(person);
+			}else if(getLength(obj) < colorArr.length){
+				selectColor();
+			}
+		
+     }
+     function getLength(o){
+			var n = 0;
+			for(var i in o){
+				n++
+			}
+			return n;
+		}
+     var oBtn = document.querySelector("#btn");
+		oBtn.onclick = selectColor;
+	</script>
+</body>
+</html>

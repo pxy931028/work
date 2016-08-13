@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>手动图像切换</title>
+<script type="text/javascript">
+	var image;
+	var current = 0;
+	var images = new Array(5);
+	function init(){
+		for(var i=0;i<images.length;i++){
+			images[i] = new Image(300,300);
+			images[i].src = "images/"+i+".jpg";
+		}
+		image = document.images[0];
+	}
+	function setSrc(i){
+		current = i;
+		image.src = images[i].src;
+	}
+	function next(){
+		if(current>=4){
+			return false;
+		}else{
+			current++;
+			setSrc(current);
+		}
+	}
+	function previous(){
+		if(current<=0){
+			return false;
+		}else{
+			current--;
+			setSrc(current);
+		}
+	}
+	function play(){
+		if(current>=4){
+			current = -1;
+		}
+		setSrc(++current);
+	}
+</script>
+</head>
+<body onload="init()">
+<form action="" method="post" >
+	<input type="button" value="第一张" onclick="setSrc(0)" />
+	<input type="button" value="下一张" onclick="next()" />
+	<input type="button" value="上一张" onclick="previous()" />
+	<input type="button" value="最后一张" onclick="setSrc(4)" />
+	<input type="button" value="幻灯播放" onclick="timeID = setInterval(play,1000)" />
+	<input type="button" value="停止播放" onclick="clearInterval(timeID)">
+</form>
+<p>
+<div align="center"><img src="images/0.jpg" /></div>
+</body>
+</html>

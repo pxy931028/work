@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片自动轮番</title>
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	.clear{
+		clear:both;
+	}
+    #box0{
+       	width: 450px;
+        overflow:hidden;
+    }
+    #box0 .pic{
+    	width:3500px;
+    	
+    }
+    #box0 .pic li{
+       	float:left;
+       	list-style:none;
+       	
+    }
+    #box0 .pic li img{
+    	float:left;
+    	width: 450px;
+    	height: 300px;
+
+    }
+    .list li{
+    	list-style:none;
+    	float:left;
+    	border:1px solid red;
+    	height: 20px;
+    	width: 30px;
+    	line-height:20px;
+    	text-align:center;
+    	cursor:pointer;
+    }
+	</style>
+</head>
+<body>
+	<div id ="box0">
+		<ul class="pic">
+			<li><img src="images/0.jpg" alt=""></li>
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/3.jpg" alt=""></li>
+			<li><img src="images/4.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script>
+       var i=0;
+       function fun(){
+       	 i ++;
+       	var change = (-450 * i)
+       	$("#box0 ul").animate({"margin-left":change},500)
+       	if(i==5){
+       		i=0
+       	}
+       }
+       $("#list li").click(function(){
+          var index=$ (this).index();
+          var change=(-650*index)+"px"   
+          $("#box ul").animate({"margin-left":change},500)
+        })
+       setInterval(fun,1000)
+	</script>
+</body>
+</html>

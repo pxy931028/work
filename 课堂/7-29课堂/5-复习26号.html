@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">抽奖</button>
+	<script>
+		//检测类型
+		var arr=[];
+		console.log(typeof arr);       //typeof 一般检测原始类型
+		var arr1={};
+		console.log(arr1 instanceof Object);  //instanceof 检测引用类型
+
+		//包装对象 Number  String  Boolean
+		var num=89;
+		var str=num.toString();
+		console.log(typeof str);
+		console.log(typeof num);
+		console.log(num);
+
+		var num1=new Number(100);
+		var num2=new Number(200);
+		var result=num1+num2;
+		console.log(result);
+		console.log(typeof num1);
+		console.log(typeof result);
+
+		var num0=001;
+		num0.name="lucy";
+		console.log("11"+num0.name);
+		//原因是在JavaScript中只要引用了字符串（数字、布尔值也是一样的）的属性，JS就会将字符串通过调用new String(s)的方式转换成对象，这个对象继承了字符串的方法，并被用来处理属性的引用。一旦属性引用结束，这个新创建的对象就会销毁,这个过程就叫包装对象。
+
+		var num00=new Number(100);
+		num00.name="lucy";
+		console.log(num00.name);
+
+		//类型转换
+		var str0="123.4";
+		var num03=Number(str0);
+		console.log(num03);
+		var str="238.93.67px";
+		var num3=Number(str);
+		console.log(num3);
+
+		var num4=parseInt(str); //转换成整型数据 都是从第一位开始转起，找到数字转
+		var num5=parseFloat(str);   //转换成浮点小数                   碰到字母停
+		console.log(num4);    
+		console.log(num5);
+
+		var data="0";
+		console.log(typeof data)
+		var data0=Infinity;   //无穷大，-Infinity 无穷小
+		console.log(typeof data0)
+		var data1=[];
+		var data2=null;
+		var data3=undefined;
+		var bool=Boolean(data1);
+		console.log(bool)
+		//字符串转化为布尔值有内容结果为true,无内容为false;数字转换成布尔值非零值为真，零为假;对象转化成布尔为true;另NaN,null,undefined转为布尔结果是false
+		var str="hello";
+		console.log(!!str);       //!为非
+
+		var nu=null;
+		var str9=String(nu);
+		console.log(str9);
+		console.log(typeof str9);
+		console.log(typeof null)     //结果为Object
+
+		//arguments对象    作用：用于存储函数中的实参，一般都是在函数中使用
+		function fun(num1,num2){
+			console.log(arguments.length);     //实参个数
+			arguments[0];         //第一个参数
+			arguments[1];
+			arguments[2];
+		}
+		fun(1,2,3,4);
+		//arguments对象的应用
+		function jisuan(){
+			if(arguments.length==1){
+				var result=arguments[0]*arguments[0];
+			}else if(arguments.length==2){
+				var result=arguments[0]*arguments[1];
+			}
+			return result;
+		}
+		var re=jisuan(20,30);
+		console.log(re);
+		//求阶乘
+		function jc(num){
+			var result=1;
+			for(var i=num;i<=num&&i>0;i--){
+				result=result*i;	
+			}
+			return result;
+		}
+		var fina=jc(5);
+		console.log(fina);
+
+		//递归函数求阶乘
+		function jc0(num){
+			if(num==1){
+				return num;
+			}else{
+				return num*jc0(num-1)
+			}
+		}
+		console.log(jc0(5))
+
+		//抽奖活动
+		var color=["红","橙","黄","绿","青","蓝","紫"];
+		var strcolor={};     //用于标记抽过的内容
+		function selectorcolor(){
+			var num=Math.floor(Math.random()*color.length);
+			var select=color[num];			
+			if(strcolor[select]===undefined){
+				strcolor[select]=1;           //对象的属性值为: 1,属性名是“红”···
+				console.log(select);
+			}else if( dat(strcolor)<color.length){
+				selectorcolor();
+			}
+
+		}
+		function dat(obj){          //获取对象元素的个数
+			var n=0;
+			for(var i in obj){
+				n++;
+			}
+			return n
+		}
+		document.querySelector("#btn").onclick=selectorcolor;
+
+		// for in 语句 用于遍历数组或者对象的属性
+        var ofor=[1,2,3,4,5,6];
+        for(var i in ofor){
+        	console.log(i)
+        }
+        var ofor1={name:"mimi",age:4,foot:"fish"}
+        for(var i in ofor1){
+        	console.log(i);
+        	console.log(ofor1[i]);    //console.log(ofor1["name"])
+        }
+	</script>
+</body>
+</html>

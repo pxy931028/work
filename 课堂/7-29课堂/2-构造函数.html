@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// function Cat(name){
+		// 	this.name=name;                 //this 是cat1
+		// 	this.sayname=function(){
+		// 		console.log("I'm "+this.name)
+		// 	}
+		// }
+		// var cat1= new Cat("miaomiao")
+		// console.log(cat1.name)
+		// cat1.sayname()
+
+		function Fox(){
+			console.log(this)     //this 是window对象
+		}
+		Fox()
+
+		function Box(){
+			console.log(this)
+		}
+		var box = Box("haha")
+
+		
+	</script>
+</body>
+</html>

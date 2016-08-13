@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时抢购</title>
+	<style>
+      .box{
+         border:1px solid red;
+         height: 30px;
+         width: 100px;
+         background-color: yellow;
+         line-height:30px;
+
+      	
+      }
+      .active{
+      	background-color: #f00;
+      	cursor:pointer;
+      }
+	</style>
+</head>
+<body>
+	<p>剩余<span></span></p>
+	<div class="box">开始抢购</div>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script>
+	    var strtime = "2016-08-19 14:22:00"
+
+       function fun(){
+       	var timeTarget = new Date(strtime);
+        var target = timeTarget.getTime();
+          // alert(target);
+        var nowTime = new Date();
+        var nowTarget = nowTime.getTime();
+          // alert(nowTarget);
+        var result = timeTarget - nowTarget;
+          // console.log(result);
+        var day0 = result / (24*60*60*1000)
+        var day =Math.floor(day0) 
+         // alert(day);
+        var hours0 = result % (24*60*60*1000)
+        var hours =Math.floor(hours0/(60*60*1000))  
+         // alert(hours);
+        var minutes0 = hours0 % (60*60*1000)
+        var minutes =Math.floor(minutes0/(60*1000))  
+         // alert(minutes);
+        var seconds0 = minutes0 % (60*1000)
+        var seconds =Math.floor(seconds0 / 1000) 
+         // alert(seconds);
+        var span0 = day + "天，" + hours + ":" + minutes + ":" + seconds 
+        $("span").text(span0)
+           if (day==0&&hours==0&&minutes==0&&seconds==0){
+        	 $(".box").addClass("active");
+        	 clearInterval(t)
+        }
+       }
+      var t = setInterval(fun,1000);
+
+
+	</script>
+</body>
+</html>

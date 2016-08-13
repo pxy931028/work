@@ -1,0 +1,91 @@
+*{
+	    margin:0px;
+	    padding:0px;
+      }
+     h1{
+     	color:red;
+     	width:125px;
+     	height: 100px;
+     	line-height:100px;
+     	border:1px solid red;
+     	text-align:center;
+     	margin:0 auto;
+        background-color:red;
+        float:left;
+        display:block;
+     }
+     .header{
+     	width:1000px;
+     	height:122px;
+     	border:1px solid red;
+     	margin:0 auto;
+     }
+     .header .logo{
+     	width:150px;
+     	height:40px;
+     	float:left;
+     	border:1px solid red;
+     
+     }
+     .header .search{
+     	width:150px;
+     	height:40px;
+     	float:right;
+     	border:1px solid red;
+
+     }
+     .header .clear{
+     	clear:both;
+     }
+     .header .nav{
+     	background-color:#aaa;
+     	height:50px;
+     	width:1000px;
+     }
+     .header  ul li{
+     	height:48px;
+     	width:123px;
+     	line-height:50px;
+     	border:1px solid blue;
+     	list-style: none;
+     	text-align:center;
+          margin:0 auto;
+     	float:left;
+     }
+     .banner{
+     	width: 1000px;
+     	height: 268px;
+          border:1px solid red;
+          margin:0 auto;
+     }
+      .banner img{
+     	width: 1000px;
+     	height: 270px;
+     }
+     .container{
+     	height:450px;
+          width:1000px;
+     	border:1px solid red;
+     	margin:0 auto;
+
+     }
+     .container .top .c-t-left{
+     	width:498px;
+     	height:248px;
+     	border:1px solid red;
+     	float:left;
+     	
+     }
+      .container .top .c-t-center{
+     	width:248px;
+     	height: 248px;
+     	border:1px solid red;
+     	float:left;
+     
+    }
+     .container .top .c-t-right{
+     	width:248px;
+     	height: 248px;
+     	border:1px solid red;
+     	float:right;
+     }

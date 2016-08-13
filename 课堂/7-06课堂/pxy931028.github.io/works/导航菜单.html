@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+         *{
+            margin:0px;
+            padding:0px;
+        }
+        #dh{
+        	margin-left:50px;
+        	margin-top:20px;
+        }
+        #dh li{
+            height:30px;
+            width: 150px;
+        	float:left;
+        	line-height:30px;
+        	text-align:center;
+        	list-style:none;
+        	border:1px solid black;
+        	overflow:hidden;
+        }
+          a{
+         	display:block;
+         	height:30px;
+            width: 150px;
+         	background-color:yellow;
+         }
+         li div span{
+         	display:block;
+         	height:30px;
+            width: 150px;
+         	background-color:red;
+         }
+	</style>
+</head>
+<body>
+	<ul id="dh">
+		<li>
+			<div>
+				<span>HOME</span>
+				<a href="">HOME</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<span>CONTACT</span>
+				<a href="">CONTACT</a>
+			</div>
+		</li>	
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+           $("#dh li").mouseenter(function(){
+           	$(this).find("div").animate({"margin-top":"-30px"},2000)
+           }).mouseleave(function(){
+           	$(this).find("div").animate({"margin-top":"0px"},2000)
+           })
+
+     </script>
+</html>

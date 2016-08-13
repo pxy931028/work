@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	    ul li{
+	    	float:left;
+	    	list-style:none;
+	    	border:1px solid red;
+	    	width: 20px;
+	    	height: 20px;
+	    	cursor:pointer;
+	    }
+	</style>
+</head>
+<body>
+	<img id="pic" src="images/0.jpg" alt="">
+	<ul>
+		<li class="but1">1</li>
+		<li class="but2">2</li>
+		<li class="but3">3</li>
+		<li class="but4">4</li>
+		<li class="but5">5</li>
+	</ul>
+	
+	<script src="script/jquery.js"></script>
+	<script>
+        $(".but1").click(function(){
+     	   $("#pic").attr("src","images/0.jpg")
+        });
+        $(".but2").click(function(){
+     	   $("#pic").attr("src","images/1.jpg")
+        });
+        $(".but3").click(function(){
+     	   $("#pic").attr("src","images/2.jpg")
+        });
+        $(".but4").click(function(){
+     	   $("#pic").attr("src","images/3.jpg")
+        });
+        $(".but5").click(function(){
+     	   $("#pic").attr("src","images/4.jpg")
+        });
+        
+	</script>
+</body>
+</html>

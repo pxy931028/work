@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">点名</button>
+	<script>
+      var arr=["红","橙","黄","绿","青","蓝","紫"];
+      var obj= {};
+        function select(){
+          var num =Math.floor(Math.random() * arr.length)
+          var person = arr[num];
+         
+            if(obj[person]===undefined){
+              // console.log(obj[person])
+              obj[person]=1
+              
+              console.log(person)
+            }else if(getLength(obj) < arr.length){
+                select();
+               }
+          
+        }
+        function getLength(o){
+      var n = 0;
+      for(var i in o){
+        n++
+      }
+      return n;
+    }
+         var obtn=document.querySelector("#btn");
+         obtn.onclick = select;
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt1">+
+	<input type="text" class="txt2">=
+	<input type="text" class="txt3">
+	<input type="button" value="计算" id="btn">
+    <script>
+      var str1 = document.querySelector(".txt1");
+      var str2 = document.querySelector(".txt2");
+      var str3 = document.querySelector(".txt3");
+      var obtn = document.querySelector("#btn");
+      obtn.onclick = function(){
+      var result = Number(str1.value) + Number(str2.value)
+        str3.value = result
+      }
+    </script>
+</body>
+</html>

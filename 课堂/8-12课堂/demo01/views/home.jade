@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title #{title}
+	link(rel="stylesheet", href="style/home.css")
+body
+	h1 这是一个模板引擎
+	ul
+		-for(var i=0;i<nav.length;i++)
+			li
+				a(href=nav[i]["url"])=nav[i]["title"]
+	img(src="images/1.jpg")
+
+	

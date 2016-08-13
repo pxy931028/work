@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul >
+		<li class="list">1</li>
+		<li class="list">2</li>
+		<li class="list">3</li>
+		<li class="list">4</li>
+		<li class="list">5</li>
+	</ul>
+	<script>
+       var alist = document.getElementsByClassName("list")
+        for (var i=0;i<alist.length;i++)
+         alist[i].onclick = function(){
+            alert("hello word")
+       }
+	</script>
+</body>
+</html>

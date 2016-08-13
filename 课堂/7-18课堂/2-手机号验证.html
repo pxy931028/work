@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     .green{
+     	color:green;
+     }
+     .red{
+     	color:red;
+     }
+	</style>
+</head>
+<body>
+	<div class="">
+	<label for="phoneNumber" value="">手机号：</label>
+	<input type="text" id="phoneNumber">
+	<span id="inf"></span>
+	</div>
+	<script src="script/jquery.js"></script>	
+	<script>
+     var re=/^[0-9]{11}$/  
+     $("#phoneNumber").blur(function(){
+       var str= $("#phoneNumber").val()
+       var result = re.test(str)
+       console.log(result)
+       if ( result ){
+         $("#inf").text("成功！").removeClass().addClass("green")
+       }else{
+       	 $("#inf").text("失败！").removeClass().addClass("red")
+       }
+     })
+	</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+        *{
+     	margin:0px; 
+     	padding:0px;
+     }
+     img{
+        width: 330px;
+        height: 190px;	
+     }
+     .list{
+     	margin-top:10px;
+     	list-style:none;
+     }
+     .list li{
+      	float:left;
+      	width: 30px;
+      	height: 20px;
+      	border:1px solid #aaa;
+      	line-height:20px;
+      	text-align:center;
+      	background-color:yellow;
+     }
+     .list .active{
+     	background-color:red;
+     }
+	</style>
+</head>
+<body>
+	<img src="images/0.jpg" alt="">
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<script>
+       var olist = document.querySelector(".list");
+       var oimg =document.querySelector("img");
+       var oli = document.querySelectorAll("li");
+       var arr=["images/0.jpg","images/1.jpg","images/2.jpg"];
+       for(var i=0;i<oli.length;i++){
+        oli[i].onclick =(function(i){
+            return function(){
+              var src=arr[i];
+              oimg.src=src;
+              addClass(this,"active");
+              var sibs=siblings(this);
+              for (var j=0;j<sibs.length;j++){
+                removeClass(sibs[j],"active");
+              }
+            }
+        })(i)
+       }
+       function siblings(elem){
+      var sibs = elem.parentNode.children;
+      var newArr = [];
+      for(var i = 0;i<sibs.length;i++){
+        if(sibs[i] != elem){
+          newArr.push(sibs[i])
+        }
+      }
+      return newArr;
+    }
+
+    function removeClass(elem,str){
+      var cName = elem.className;
+      var arrClassName = cName.split(" ");
+      var newArr = [];
+      for(var i = 0;i<arrClassName.length;i++){
+        if(arrClassName[i] != str){
+          newArr.push(arrClassName[i]);
+        }
+      }
+      var newStr = newArr.join(" ");
+      elem.className = newStr;
+    }
+
+    function addClass(elem,str){
+      if(elem.className){
+        var oriName = elem.className;
+        var newClass = oriName + " " + str;
+        elem.className = newClass;
+      }else{
+        elem.className = str;
+      }
+    }
+	</script>
+</body>
+</html>

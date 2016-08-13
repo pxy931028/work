@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业2</title>
+	<style>
+     *{
+     	margin: 0px;
+     	padding: 0px;
+     }
+     #list{
+     	margin-top:50px;
+     	margin-left:30px;
+     }
+     #list li{
+     	margin-top:8px;
+     	list-style:none;
+     }
+     #list li span{
+     	margin-left:10px;
+     }
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>香蕉<span><input type="button" value="删除" class="fruit"></span></li>
+		<li>苹果<span><input type="button" value="删除" class="fruit"></span></li>
+		<li>橘子<span><input type="button" value="删除" class="fruit"></span></li>
+		<li>西瓜<span><input type="button" value="删除" class="fruit"></span></li>
+		<li>鸭梨<span><input type="button" value="删除" class="fruit"></span></li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+     $("#list li span").click(function(){
+     var result = window.confirm("确定删除该项吗？");
+     if(result){
+          $(this).parent().remove();
+     }
+     })
+	</script>
+</body>
+</html>

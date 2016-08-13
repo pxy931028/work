@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	     *{
+	     	margin:0px;
+	     	padding:0px;
+	     }
+         #pic{
+         	width: 500px;
+         }
+         #pic ul{
+         	width: 1600px;
+         	height: 260px;
+         }
+         #pic ul li{
+         	float:left;
+         	margin-left:10px;
+         	list-style:none;
+         }
+         #pic ul li img{
+         	width: 400px;
+         }
+	</style>
+</head>
+<body>
+	<div id="pic">
+		<ul>
+			<li><img src="images/0.jpg" alt=""></li>
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="bigbox"></div>
+	<script src="script/jquery.js"></script>
+	<script>
+        $("#pic ul li").mouseenter(function(){
+        	var i = $(this).index();              // var src=$(this).attr("src")    获取图片的src属性
+        	var src ="images/" + i +".jpg"        // var img=$("<img>")        创建一个img标签并把它赋值给变量img
+        	var img= '<img src="' + src + '">'    // img.attr("src",src);      把src的值给予img标签
+        	$(".bigbox").append(img);            
+        });
+         $("#pic ul li").mousemove(function(event){
+           	 var left = event.pageX + 10 ;
+         	 var top = event.pageY +10 ;
+         	 $(".bigbox").css({"position":"absolute","top":top ,"left":left});    
+         	                                            // $(".bigbox img").css("top",top).css("left",left);
+           });
+         $("#pic ul li").mouseleave(function(){
+             $(".bigbox img").remove();
+         });
+	</script>
+</body>
+</html>

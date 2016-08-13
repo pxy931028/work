@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="按钮" class="btn">
+	<input type="button" value="按钮" class="btn">
+	<input type="button" value="按钮" class="btn">
+	<input type="button" value="按钮" class="btn">
+
+	<script src="2-myjquery.js"></script>
+	<script>
+		var btn = new $(".btn");
+		console.log(btn)
+		btn.click(function(){
+			alert("hello word");
+		})
+	</script>
+</body>
+</html>

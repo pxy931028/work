@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var num=[3,8,2,7,4,6,1]
+		function fun(num){
+			for (var i=num.length;i>1;i--){
+				for (var j=0;j<i;j++){
+					if(num[j]>num[j+1]){
+						var temp=num[j+1]
+						num[j+1]=num[j]
+						num[j]=temp
+						
+					}
+				}
+			}
+		}
+		fun(num)
+		console.log(num)
+
+		// var num1=[9,3,6,2,7]
+		// function fun1(num1){
+		// 	for(var i=0;i<num1.length;i++){
+		// 		for(var j=0;i+j<num1.length-1;j++){
+		// 			if(num1[j]>num1[j+1]){
+		// 				var temp=num1[j+1]
+		// 				num1[j+1]=num1[j]
+		// 				num1[j]=temp
+						
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// fun1(num1)
+		// console.log(num1)
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     body{
+     	width: 2000px;
+     	height: 2000px;
+     }
+     .box{
+			height: 100px;
+			width: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script src="script/jquery.js"></script>
+	<script>
+         // $(window).resize(function(){         //改变窗口大小时触发事件
+         // 	alert("haha");
+         // })
+         // $(window).scroll(function(){
+         // 	alert("xixi")
+         // })
+         // window.onload = function(){
+         // 	alert("xiha")
+         // }
+
+
+
+         $(function(){
+         	$(".box").css("background-color","blue");
+         })
+	</script>
+</body>
+</html>

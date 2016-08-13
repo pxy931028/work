@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr=[2,4,6,8,10,12,14,16,18,20,22];
+		function search(array,num){
+			var low=0;
+			var up=array.length-1;
+			var index=-1;
+			function getindex(){
+				var mid=Math.floor((low+up)/2);
+				if(low<=up){
+					if(array[mid]>num){
+						up=mid-1;
+						getindex();
+					}else if(array[mid]<num){
+						low=mid+1;
+						getindex();
+					}else{
+						index= mid;
+					}
+				}				
+		    }
+			getindex()
+			return index;			
+		}
+		console.log(search(arr,20))
+	</script>
+</body>
+</html>

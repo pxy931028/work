@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     .big{
+     	height: 300px;
+     	width: 300px;
+     	background-color: yellow;
+     }
+     .small{
+     	height: 150px;
+     	width: 150px;
+     	background-color:red;
+     }
+
+	</style>
+</head>
+<body>
+	<div class="big">
+		<div class="small"></div>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+       var n=0;
+       // $(".big").mouseover(function(){
+       // 	   console.log(n++);
+       // })
+
+       var obig=document.querySelector(".big");
+       // obig.onmouseenter =function(){
+       // 	   console.log(n++);
+       // }
+
+       obig.addEventListener("mouseenter",function(){    
+           console.log(n++);
+       },false)
+	</script>
+</body>
+</html>

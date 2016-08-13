@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+       var color=["红","橙","黄","绿","青","蓝","紫","橙","红"];
+       // console.log(color)
+       // var colorstr=[];
+       function fun(color){
+       	for(var i=0;i<color.length-1;i++){
+       		for(var j=i+1;j<color.length;j++){
+       			if(color[i]==color[j]){
+       				color.splice(j,1)
+       			}
+       		}
+       		
+       	}
+              return color
+       }
+       fun(color)
+       console.log(color)
+	</script>
+</body>
+</html>

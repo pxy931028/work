@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        function fun(x,y){
+        	var num =arguments.length
+            console.log(num);         
+            
+            if(num==1){
+            	return arguments[0]*arguments[0]
+            }else if(num==2){
+            	return arguments[0]*arguments[1]
+            }
+
+        }
+
+       var re=fun(2)
+       var ree= fun(2,3)
+       console.log(re)
+       console.log(ree)
+	</script>
+</body>
+</html>

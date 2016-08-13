@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn1">按年龄排序</button>
+	<button id="btn2">按颜色排序</button>
+	
+	<script>
+		var arr=[{"name":"红","colol":5,"age":4},
+				 {"name":"橙","colol":3,"age":5},
+				 {"name":"黄","colol":2,"age":3},
+				 {"name":"绿","colol":9,"age":8},
+				 {"name":"青","colol":7,"age":2},
+				 {"name":"蓝","colol":4,"age":7},
+				 {"name":"紫","colol":8,"age":9}]	
+		
+				var len=arr.length;  
+		function sort(array){			
+			for(var i=len;i>1;i--){
+				for(var j=0;j<i-1;j++){					
+					if(array[j].age>array[j+1].age){
+						var temp=array[j]
+						array[j]=array[j+1]
+						array[j+1]=temp;
+					}
+				}
+
+			}
+
+			// return array;
+		}	
+		sort(arr)
+		console.log(arr)	
+		
+	</script>
+</body>
+</html>

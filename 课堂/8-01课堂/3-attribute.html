@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var obj={
+		name:"mimi",
+		age:2,
+		color:"red"
+	}
+     function attr(attribute,value){
+     	attribute[value]="miaomiao";     
+     }
+     attr(obj,"name");
+     console.log(obj.name);
+
+     var obj0={
+     	name:"fox",
+     	age:9,
+     	like:"fish"
+     }
+     function attr(obj ,name,value){
+     	obj[name]=value;
+     }
+     attr(obj0,"name","cat");
+     console.log(obj0.name);
+
+     var obj1={
+     	name:"xiha",
+     	age:89,
+     	color:"black"
+     }
+     function attr(obj,name,value){
+     	if(arguments.length==2){
+     		return obj[arguments[name]];
+     	}else if(arguments.length==3){
+     		obj[name]=value
+     	}
+     }
+     attr(obj1,"age",100)
+     console.log(obj1.age)
+	</script>
+</body>
+</html>

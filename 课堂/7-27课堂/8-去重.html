@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var color=["红","橙","黄","绿","青","蓝","紫","橙","红"];
+		function selectcolor(array){
+			var newcolor=[];
+			var bool=true
+   			for(var i = 0;i<array.length;i++){
+   				for(var j = 0;j<newcolor.length;j++){
+   					if(newcolor[j] === array[i]){
+                        bool=false
+   					}
+   				}
+   				if(bool){
+   					newcolor.push(array[i])
+   				}		
+   			}
+   			return newcolor
+		} 
+		var result = selectcolor(color);
+		console.log(result);      
+	</script>
+</body>
+</html>

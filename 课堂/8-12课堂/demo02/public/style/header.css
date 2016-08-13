@@ -1,0 +1,15 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.clear{
+	clear:both;
+}
+ul li{
+	float:left;
+	height: 30px;
+	width: 50px;
+	line-height: 30px;
+	text-align:center;
+	list-style:none;
+}

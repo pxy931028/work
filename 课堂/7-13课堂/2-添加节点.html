@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="txt">
+		<input type="button" id="but" value="添加">
+	</form>
+	<ul id="list">
+		<li>沙发 <span>删除</span></li>
+		<li class="mc">木床 <span>删除</span></li>
+		<li>电视 <span><input type="button" value="删除"></span></li>
+		<li>冰箱 <span><input type="button" value="删除"></span></li>
+		<li>电视 <span><input type="button" value="删除"></span></li>
+	</ul>
+
+	<script src="script/jquery.js"></script>
+	<script>
+	     $("#but").click(function(){
+	     	var value = $("#txt").val();
+	     	var li = "<li>"+value+"</li>";
+	     	// $("#list").append(li);   //在添加所有项之后
+	     	// $("#list").prepend(li);  //在所有项之前
+	     	$(".mc").before(li);        //在某项之前
+	     	// $(".mc").after(li);      //在某项之后
+
+	     });
+	     $("#list li span").click(function(){
+	     	console.log($(this).parent())
+           $(this).parent().remove();
+         })  
+	</script>
+</body>
+</html>

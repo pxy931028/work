@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="script/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("img").attr("width",function(n,v){
+      return v-50;
+    });
+  });
+});
+</script>
+</head>
+<body>
+<img src="images/1.jpg" width="128" height="128" />
+<br />
+<button>减少</button>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	     *{
+            margin:0px;
+            padding:0px;
+        }
+         #menu>li{
+         	list-style:none;
+         	float:left;
+         	width: 60px;
+         	height: 30px;
+         	border:1px solid red;
+            text-align:center;
+            line-height:30px;
+         }
+        .cen{
+        	list-style:none;
+        	display:none;
+        } 
+	</style>
+</head>
+<body>
+	<ul id="menu">
+        <li>
+        	<a href="">服装</a>
+			<ul class="cen">
+			   <li>连衣裙</li>
+			   <li>衬衫</li>
+			   <li>长裤</li>
+		    </ul>
+		</li>
+		<li>
+			<a href="">箱包</a>
+			<ul class="cen">
+				<li>双肩包</li>
+				<li>单肩包</li>
+				<li>皮包</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">鞋子</a>
+            <ul class="cen">
+            	<li>皮鞋</li>
+            	<li>帆布鞋</li>
+            	<li>高跟鞋</li>
+            </ul>
+		</li>  
+	</ul>
+     <script src="script/jquery.js"></script>
+     <script>
+           $("#menu>li").mouseenter(function(){
+           	$(this).find("ul").stop().slideDown(500);
+           }).mouseleave(function(){
+           	$(this).find("ul").stop().slideUp(500);
+           })
+
+     </script>
+</body>
+</html>

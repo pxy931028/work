@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box1{
+		border:1px solid blue;
+		text-align:center;
+	}
+	img{
+		border:1px solid red;
+		text-align:center;
+	}
+	.box3{
+		border:1px solid yellow;
+		width: 300px;
+		height: 200px;
+		margin:0 auto;
+	}
+	.list{
+		border:1px solid red;
+	}
+	.list li{
+		list-style:none;
+        float:left;
+        border:1px solid red;
+	}
+	table{
+		margin:0 auto;
+	}
+	.clear{
+		clear:both;
+	}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<a href="">文字代码浮动</a>
+	</div>
+	<div class="box2">
+		<img src="images/1.gif" alt="">
+	</div>
+	<div class="box3"></div>
+	<table>
+		<tr>
+			<td>
+				<ul class="list">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li class="clear"></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+       var x=40;
+       var y=80;
+       function outfun(){
+       	var x=20;
+       	var y=30;
+       	function infun(){
+       		var m=9;
+       		console.log(m)
+       	}
+       	return infun
+       }
+       var fun = outfun()
+       fun();
+       console.log(fun())
+	</script>
+</body>
+</html>

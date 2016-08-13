@@ -1,0 +1,38 @@
+
+	.logo{
+		margin-top:30px;
+		margin-left:30px;
+	     }
+	 .search{
+	 	margin-top:30px;
+		margin-left:30px;
+	     }
+	h3{
+		color:red;
+		margin-top:20px;
+		margin-left:20px;
+		
+
+	}
+    .c-t-center p a{
+    text-decoration:none;
+     color:blue;
+    }
+    .c-t-left ul li{
+    	margin-left:20px ;
+    }
+    .na li span{
+    	float:right;
+    }
+    .myp{
+    	margin-top:10px;
+		margin-left:10px;
+    }
+    .na li a{
+    text-decoration:none;
+     color:blue;
+    }
+     .c-t-right p a{
+    text-decoration:none;
+     color:blue;
+ }

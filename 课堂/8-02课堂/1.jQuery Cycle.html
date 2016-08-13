@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.num-list li{
+			
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="pic-list">
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/3.jpg" alt=""></li>
+			<li><img src="images/4.jpg" alt=""></li>
+			<li><img src="images/5.jpg" alt=""></li>
+		</ul>
+		<ul class="num-list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script src="cycle plugin/jquery.cycle.all.js"></script>
+	
+	<script>
+		$(".pic-list").cycle();
+		// $(".num-list li").click(function(){
+		// 	var index=$(this).index();
+		// 	$(.pic-list).cycle(index);
+		// })
+	</script>
+</body>
+</html>

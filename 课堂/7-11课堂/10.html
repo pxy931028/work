@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		 margin:0px;
+         padding:0px;
+	}
+	   #list li{
+	    	list-style:none;
+	    	float:left;
+	    	width: 98px;
+	    	height: 30px;
+	    	border:1px solid red;
+	    	text-align:center;
+	    	line-height:30px;
+	    	cursor:pointer;
+	    }
+	    .clear{
+	    	clear:both;
+	    }
+	    .content div{
+	    	width: 300px;
+	    	height: 300px;
+	    	border:1px solid red;
+	    	display:none;
+	    }
+	    .content .active{
+	    	display:block;
+	    }
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>标签1</li>
+		<li>标签2</li>
+		<li>标签3</li>
+	</ul>
+	<div class="clear"></div>
+	<div class="content">
+		<div class="active"><h1>内容1</h1></div>
+		<div><h1>内容2</h1></div>
+		<div><h1>内容3</h1></div>
+	</div>
+		<script src="script/jquery.js"></script>
+		<script>
+          $("#list li").click(function(){
+            var index = $(this).index();
+          $(".content div").eq(index).addClass("active").siblings().removeClass("active");
+          
+        })
+	    </script>
+</body>
+</html>

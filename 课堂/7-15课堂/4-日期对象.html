@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span></span>
+	<script src="script/jquery.js"></script>
+	<script>
+	  // var riqi=""
+	  var today = new Date();
+	  alert(today);
+	  var year = today.getFullYear();
+	  alert(year);
+	  var month = today.getMonth();
+	  alert(month);
+	  var date = today.getDate();
+	  var day = today.getDay();
+	  alert(day);
+	  var hours = today.getHours();
+	  alert(hours);
+	  var minutes = today.getMinutes();
+	  alert(minutes);
+	  var seconds = today.getSeconds();
+	  alert(seconds);
+      var rq = year + "年" + (month + 1) + "月" + date +"日" ;
+      $("span").text(rq);
+
+	 
+	</script>
+</body>
+</html>
